@@ -24,8 +24,8 @@ mysqli_close($con);
 <html>
 <?php
 $title = "New Event";
-$css = "<link href='static/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css'>";
-$js = "<script src='static/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js'></script>";
+$css = "<link href='static/datepicker/datepicker3.css' rel='stylesheet'>";
+$js = "<script src='static/datepicker/bootstrap-datepicker.js'></script>";
 include "templates/includes/head.php"
 ?>
 <body>
@@ -96,11 +96,11 @@ include "templates/includes/head.php"
     <div class="form-group">
       <div class="row">
         <label class="col-sm-2 control-label" for="date">Date</label>
-        <div class="col-sm-4">
-          <input type="text" data-format="dd/MM/yyy hh:mm" name="event_date" id="date" class="form-control" maxlength="30">
-          <span class="add-on">
-            <span class="glyphicon glyphicon-calendar"></span>
-          </span>
+        <div class="col-sm-2">
+          <input type="text" name="date" id="date" class="form-control" maxlength="30" placeholder="Date?">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" name="time" id="time" class="form-control" placeholder="Time?">
         </div>
       </div>
     </div>
